@@ -5,7 +5,7 @@
 - O teste consiste em criar um back-end em node.js utilizando o banco de dados PostgresSQL que expõe uma API REST de um CRUD simples de usuários e uma interface para login e consulta de dados de uma API externa
 - O front-end não deve ser complexo mas deve apresentar funcionalidades básicas como login e mensagens de usuário / senha incorretos, ...
 - O CRUD em si pode ser acessado diretamente pelos endpoints e não necessita uma interface
-- Depois de logado o usuário irá consumir pela interface dados de qualquer uma das API's externas na listagem de [API's públicas](https://github.com/toddmotto/public-apis) (de sua escolha), uma delas inclsuive te entrega [cervejas e não necessita autenticação](https://punkapi.com/)
+- Depois de logado o usuário irá consumir pela interface dados de qualquer uma das API's externas (de sua escolha) na listagem de [API's públicas](https://github.com/toddmotto/public-apis), uma delas inclsuive te entrega [cervejas e não necessita autenticação](https://punkapi.com/)
   - Deve se apresentar os dados numa listagem simples com paginação e opcionalmente filtros
   - Os endpoints de consulta de dados devem todos ser protegidos por uma webtoken ou similar
 - Pode ser utilizado qualquer ORM de preferência, aconselhamos o uso do [sequelize](https://github.com/sequelize/sequelize), [typeorm](https://github.com/typeorm/typeorm), ...
