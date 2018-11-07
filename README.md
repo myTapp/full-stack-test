@@ -12,10 +12,10 @@
   - para consulta de dados de uma API externa
   
 - O front-end deve ser simples e deve apresentar funcionalidades básicas como login, mensagens de usuário / senha incorretos, ...
-- Depois de logado o usuário deve poder consumir pela interface dados de qualquer uma das API's externas (de sua escolha) da listagem de [API's públicas](https://github.com/toddmotto/public-apis).
+- Depois de logado o usuário da aplicação deve poder consumir pela interface dados de uma das API's externas (da escolha do candidato) da listagem de [API's públicas](https://github.com/toddmotto/public-apis).
   - Uma das API's entrega [cervejas e não necessita autenticação](https://punkapi.com/)
   - Deve se apresentar os dados numa listagem simples com paginação e opcionalmente filtros
-  - Os endpoints de consulta de dados devem todos ser protegidos por uma webtoken ou similar
+  - Os endpoints de consulta de dados devem todos ter autenticação por webtoken ou similar
   
 - O CRUD não necessita interface, coloque os enpoints disponíveis no readme
   
