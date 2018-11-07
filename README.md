@@ -11,14 +11,15 @@
   - para login
   - para consulta de dados de uma API externa
   
-- O front-end não deve ser complexo mas deve apresentar funcionalidades básicas como login e mensagens de usuário / senha incorretos, ...
-- Depois de logado o usuário irá consumir pela interface dados de qualquer uma das API's externas (de sua escolha) da listagem de [API's públicas](https://github.com/toddmotto/public-apis), uma delas inclsuive te entrega [cervejas e não necessita autenticação](https://punkapi.com/)
+- O front-end deve ser simples e deve apresentar funcionalidades básicas como login, mensagens de usuário / senha incorretos, ...
+- Depois de logado o usuário deve poder consumir pela interface dados de qualquer uma das API's externas (de sua escolha) da listagem de [API's públicas](https://github.com/toddmotto/public-apis).
+  - Uma das API's entrega [cervejas e não necessita autenticação](https://punkapi.com/)
   - Deve se apresentar os dados numa listagem simples com paginação e opcionalmente filtros
   - Os endpoints de consulta de dados devem todos ser protegidos por uma webtoken ou similar
   
 - O CRUD não necessita interface, coloque os enpoints disponíveis no readme
   
-- Pode ser utilizado qualquer ORM de preferência, aconselhamos o uso do [sequelize](https://github.com/sequelize/sequelize), [typeorm](https://github.com/typeorm/typeorm), ...
+- Pode ser utilizado qualquer ORM de preferência, aconselhamos o uso do [sequelize](https://github.com/sequelize/sequelize) ou [typeorm](https://github.com/typeorm/typeorm)
 - Pode ser utilizado qualquer framework front-end de preferência, preprocessadores de css, task runners, bundlers, ... mas nenhum deles é obrigatório, quanto mais simples e direto ao ponto o código melhor (KISS) - se algum for utilizado, não se deve fazer o commit de pastas como node_modules, o projeto deve instalar suas dependências a partir do package.json
 - Será julgado além do funcionamento a estrutura do código, o uso de boas práticas no js, html e css
 
