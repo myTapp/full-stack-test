@@ -2,9 +2,14 @@
   <img width="260" src="https://github.com/myTapp/front-end-test/blob/master/mytapp.png?raw=true">
 </p>
 
-- O teste consiste em criar um back-end em node.js utilizando o banco de dados PostgresSQL que expõe uma API REST de um CRUD simples de usuários e uma interface para login e consulta de dados de uma API externa
+- O teste consiste em criar uma aplicação:
+  - em node.js
+  - utilizando o banco de dados PostgreSQL
+  - que expõe uma API REST de um CRUD simples de usuários
+  - uma interface para login e consulta de dados de uma API externa
+  
 - O front-end não deve ser complexo mas deve apresentar funcionalidades básicas como login e mensagens de usuário / senha incorretos, ...
-- O CRUD em si pode ser acessado diretamente pelos endpoints e não necessita uma interface
+- O CRUD não necessita de interface, coloque os enpoints disponíveis no readme
 - Depois de logado o usuário irá consumir pela interface dados de qualquer uma das API's externas (de sua escolha) da listagem de [API's públicas](https://github.com/toddmotto/public-apis), uma delas inclsuive te entrega [cervejas e não necessita autenticação](https://punkapi.com/)
   - Deve se apresentar os dados numa listagem simples com paginação e opcionalmente filtros
   - Os endpoints de consulta de dados devem todos ser protegidos por uma webtoken ou similar
