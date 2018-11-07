@@ -6,7 +6,10 @@
   - em node.js
   - utilizando o banco de dados PostgreSQL
   - que expõe uma API REST de um CRUD simples de usuários
-  - uma interface para login e consulta de dados de uma API externa
+  
+- E uma interface web:
+  - para login
+  - consulta de dados de uma API externa
   
 - O front-end não deve ser complexo mas deve apresentar funcionalidades básicas como login e mensagens de usuário / senha incorretos, ...
 - O CRUD não necessita de interface, coloque os enpoints disponíveis no readme
