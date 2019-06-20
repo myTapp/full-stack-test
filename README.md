@@ -8,7 +8,7 @@
   - que expõe uma API REST de um CRUD de usuário
   - contendo uma interface web para login e consulta de dados de uma API externa
 
-- Depois de logado o usuário da aplicação deve poder visualizar pelo browser dados de uma das API's externas (da escolha do candidato) da listagem de [API's públicas](https://github.com/toddmotto/public-apis).
+- Depois de logado o usuário da aplicação deve poder visualizar pelo browser dados de uma das API's externas (da escolha do candidato) desta listagem de [API's públicas](https://github.com/toddmotto/public-apis).
 
 - O front-end não necessita ser complexo mas deve apresentar pelo menos os seguintes requisitos:
   - login
