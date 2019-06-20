@@ -4,12 +4,9 @@
 
 - O teste consiste em criar uma aplicação:
   - em node.js
-  - utilizando o banco de dados PostgreSQL
-  - que expõe uma API REST de um CRUD simples de usuário
-  
-- Contendo uma interface web:
-  - para login
-  - para consulta de dados de uma API externa
+  - utilizando PostgreSQL
+  - que expõe uma API REST de um CRUD de usuário
+  - contendo uma interface web para login e consulta de dados de uma API externa
 
 - Depois de logado o usuário da aplicação deve poder visualizar pelo browser dados de uma das API's externas (da escolha do candidato) da listagem de [API's públicas](https://github.com/toddmotto/public-apis).
 
