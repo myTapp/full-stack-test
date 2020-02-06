@@ -27,10 +27,10 @@ O front-end não precisa ser complexo mas deve apresentar pelo menos os seguinte
 - Estrutura do código
 - Uso de boas práticas
 - Cumprimento dos requisitos mínimos
-- Não se deve fazer o commit de pastas como `node_modules`, o projeto deve instalar suas dependências a partir do `package.json`
 
 ## Deve ser entregue:
 - Um repositório git (fork deste)
+> Não se deve fazer o commit de pastas como `node_modules`, o projeto deve instalar suas dependências a partir do `package.json`
 
 ## Extras:
 - Versão de build / produção
