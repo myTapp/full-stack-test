@@ -8,14 +8,14 @@
   - que expõe uma API REST de um CRUD de usuário
   - contendo uma interface web para login e consulta de dados de uma API externa
 
-- Depois de logado o usuário da aplicação deve poder visualizar pelo browser dados de uma das API's externas (da escolha do candidato) desta listagem de [API's públicas](https://github.com/toddmotto/public-apis).
+- Depois de logado o usuário da aplicação deve poder visualizar pelo front-end dados de uma das API's externas (da escolha do candidato) desta listagem de [API's públicas](https://github.com/toddmotto/public-apis).
 
 - O front-end não precisa ser complexo mas deve apresentar pelo menos os seguintes requisitos:
   - login
   - feedbacks de usuário ou senha incorreto
   - listagem dos dados da API escolhida
   - paginação
-  
+
 - o CRUD não necessita interface, coloque os enpoints disponíveis no readme do projeto
 - uma das API's entrega [cervejas e não necessita autenticação](https://punkapi.com/)
 - os endpoints de consulta de dados devem todos ter autenticação por webtoken ou similar
