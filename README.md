@@ -20,7 +20,7 @@ O front-end não precisa ser complexo mas deve apresentar pelo menos os seguinte
   - Listagem dos dados da API escolhida
   - Paginação
   
-> Pode ser utilizado qualquer framework front-end de preferência, preprocessadores de css, task runners, bundlers, ... mas nenhum deles é obrigatório.
+> Pode ser utilizado qualquer framework front-end, preprocessadores de css, task runners, bundlers, ... de preferência mas nenhum deles é obrigatório.
 
 ## Critérios de avaliação
 - Funcionamento do projeto
