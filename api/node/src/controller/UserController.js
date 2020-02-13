@@ -15,12 +15,19 @@ module.exports = {
   async authenticateUser(req, res) {
     const userDto = req.body;
 
-    const { user, token } = await UserService.authenticate(userDto);
+    const { user, token, error } = await UserService.authenticate(userDto, res);
+    console.log("aqui",error)
+    if(error){
+   
+      return res.status(error.status).send({ error:error.msg })
+    }else{
+      console.log("user")
+      return res.json({
+        user,
+        token,
+        error
+      });
+    }
 
-
-    return res.json({
-      user,
-      token
-    });
   }
 };
