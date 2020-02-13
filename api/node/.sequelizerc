@@ -1,0 +1,6 @@
+const paht = require('path')
+
+module.exports = {
+    config :paht.resolve(__dirname, 'src', 'config','database.js' ),
+    'migrations-path': paht.resolve(__dirname, 'src', 'database', 'migrations'),
+};
