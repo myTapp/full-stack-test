@@ -32,4 +32,4 @@ O front-end deve apresentar pelo menos os seguintes requisitos:
 > Não se deve fazer o commit de pastas como `node_modules`, o projeto deve instalar suas dependências a partir do `package.json`
 
 ## Extras:
-- Versão de build / produção
+- Build para produção
