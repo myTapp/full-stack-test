@@ -2,23 +2,22 @@
   <img width="260" src="https://raw.githubusercontent.com/myTapp/temos-vagas/master/logo_mytapp_primario.png?raw=true">
 </p>
 
-## Teste full-stack developer
-O teste consiste em criar uma aplicação com Node.js e PostgreSQL que expõe uma API REST de um CRUD de usuário contendo uma interface para login e consulta de dados de uma API externa.
-
-Depois de logado o usuário da aplicação deve poder visualizar pelo front-end dados de uma das API's externas (da escolha do candidato) desta listagem de [API's públicas](https://github.com/toddmotto/public-apis).
+## Teste full-stack developer (v1.2.0)
+O teste consiste em criar uma aplicação com Node.js e PostgreSQL que expõe uma API REST de um CRUD de usuário e uma aplicação web contendo uma interface para login e acesso a dados de uma API externa.
+Depois de logado o usuário da aplicação deve poder acessar pela aplicação web dados da [Punk API](https://punkapi.com/) - uma API aberta da cervejaria BrewDog.
 
 ### Back-end
-- Os endpoints de consulta de dados devem todos ter autenticação por webtoken ou similar
+- Todos os endpoints de consulta de dados devem ter autenticação por webtoken ou similar
 - Fique a vontade para usar algum ORM de preferência ([sequelize](https://github.com/sequelize/sequelize), [typeorm](https://github.com/typeorm/typeorm), ...)
 
 > O CRUD de usuários não necessita interface, coloque os enpoints disponíveis no README do projeto.
 
 ### Front-end
-O front-end não precisa ser complexo mas deve apresentar pelo menos os seguintes requisitos:
-  - Login
-  - Feedbacks de usuário ou senha incorreta
-  - Listagem dos dados da API escolhida
-  - Paginação
+O front-end deve apresentar pelo menos os seguintes requisitos:
+  - Interface de login
+    - Feedbacks de usuário ou senha incorreta
+  - Listagem dos dados da Punk API
+  - Paginação dos dados
   
 > Pode ser utilizado qualquer framework front-end, preprocessadores de css, task runners, bundlers, ... de preferência mas nenhum deles é obrigatório.
 
