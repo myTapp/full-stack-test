@@ -1,0 +1,47 @@
+// General htmlTags
+h2{
+    text-align: center;  
+}
+body{
+   background-color: #F1F6FB;
+
+    background-size: cover;
+}
+html{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+// General css
+.App{
+
+}
+.pushRight{
+    float: right;
+}
+
+.pushLeft{
+    float: right;
+}
+
+.postBtnView{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+    margin-bottom: 1%;
+    padding-top: 2%;
+
+    background: #FFF;
+    margin-top: 10%;
+}
+.modalView {
+    background-color: #ffff;
+    padding: 2% 0 0 0;
+    height: 600px;
+    overflow:auto;
+
+  }
+  
