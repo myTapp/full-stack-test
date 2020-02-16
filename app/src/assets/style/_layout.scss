@@ -1,5 +1,5 @@
 // General htmlTags
-h2{
+h1, h2{
     text-align: center;  
 }
 body{
@@ -11,12 +11,6 @@ html{
     font-family: 'Montserrat', sans-serif;
     
 }
-
-
-// General css
-.App{
-
-}
 .pushRight{
     float: right;
 }
@@ -24,24 +18,12 @@ html{
 .pushLeft{
     float: right;
 }
-
-.postBtnView{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-    margin-bottom: 1%;
-    padding-top: 2%;
-
-    background: #FFF;
-    margin-top: 10%;
+.btnPagination{
+    margin-left: 3px;
 }
-.modalView {
-    background-color: #ffff;
-    padding: 2% 0 0 0;
-    height: 600px;
-    overflow:auto;
+.btnView{
 
-  }
+    padding: 10px;
+    left: 10px;
+}
   
