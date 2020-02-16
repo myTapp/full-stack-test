@@ -1,4 +1,28 @@
 const axios = require("axios");
+
+const ErrorHandler = require("../ErrorHandler");
+
+
+module.exports = {
+  async getApiData(req, hasAutorization) {
+    let data = {};
+    let rickMortyData = await axios.get(
+      `https://rickandmortyapi.com/api/character/?page=${req}`
+    );
+    if (hasAutorization) {
+      data = {
+        info: getInfos(rickMortyData.data.info),
+        chars: getPersons(rickMortyData.data.results)
+      };
+    } else {
+      data = {error:ErrorHandler.FORBIDEN }
+    }
+
+    return data;
+  }
+};
+
+
 getPersons = persons => {
   let personStore = [];
   let personDto = {};
@@ -18,16 +42,4 @@ getPersons = persons => {
 getInfos = info => {
   info.cont = undefined;
   return info;
-};
-module.exports = {
-  async getApiData(req, resp) {
-    let rk = await axios.get(
-      `https://rickandmortyapi.com/api/character/?page=${req}`
-    );
-    let dataApi = {
-      info: getInfos(rk.data.info),
-      persons: getPersons(rk.data.results)
-    };
-    return dataApi;
-  }
 };

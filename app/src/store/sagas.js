@@ -16,7 +16,7 @@ async function getApiData(action){
   const userService = new UserService();
   const resp = await userService.getDataApi(action.payload.page);
   
-  let data = {info: resp.info, chars: [...resp.persons]}
+  let data = {info: resp.data.info, chars: [...resp.data.chars]}
 
   return data;
 }

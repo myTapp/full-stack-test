@@ -1,12 +1,12 @@
 const express = require ('express');
-const AuthenticateController = require("../controller/AuthorizationController");
+const CharsController = require("../controller/CharsController");
 
 const authMiddleware = require('../middlewares/auth')
 
 const routes = express.Router();
-// routes.use(authMiddleware);
+routes.use(authMiddleware);
 
-routes.post('/', AuthenticateController.isAuthenticatedUser);
+routes.post('/', CharsController.getData);
 
 routes.get('/', )
 

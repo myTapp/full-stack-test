@@ -20,6 +20,8 @@ module.exports = {
 
   async createUser(userDto) {
     const { name, password } = userDto;
+
+    
     const hash = await bcrypt.hashSync(password, 10);
     const user = await User.create({ name, password: hash });
 
