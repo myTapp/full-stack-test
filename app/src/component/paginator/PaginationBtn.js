@@ -14,7 +14,7 @@ function onHandlerActive(btnIndex) {
 }
 var actived = 1;
 const PaginationBtn = props => (
-  <Col className={"btnView"} style={{ marginBottom: 10 }}>
+  <Col className={"btnView pushCenterRow"} style={{ marginBottom: 10 }}>
     {btns(props.manyPages)
       ? btns(props.manyPages).map((bnt) => {
           return (

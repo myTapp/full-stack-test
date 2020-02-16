@@ -10,15 +10,15 @@ import Paginator from "../component/paginator/Paginator";
 import * as PerrsonsActions from "../store/actions/pagination";
 
 const Home = ({ status, getDataApi, chars, info }) => (
-  <Container onLoad={status === "initial" ? getDataApi() : null}>
+  <div className={"pushCenter"} onLoad={status === "initial" ? getDataApi() : null} >
     <h1>Welcome to the Rick and Morty </h1>
     <h2>chararters photo's </h2>
-    <Paginator
+    <Paginator 
       data={chars}
       manyPages={info}
       getDataApi={getDataApi}
     ></Paginator>
-  </Container>
+  </div>
 );
 
 const mapStateToProps = state => ({

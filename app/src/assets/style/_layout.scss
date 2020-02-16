@@ -1,29 +1,47 @@
 // General htmlTags
-h1, h2{
-    text-align: center;  
+h1,
+h2 {
+  text-align: center;
 }
-body{
-   background-color: #F1F6FB;
+body {
+  background-color: #f1f6fb;
 
-    background-size: cover;
+  background-size: cover;
 }
-html{
-    font-family: 'Montserrat', sans-serif;
-    
+html {
+  font-family: "Montserrat", sans-serif;
 }
-.pushRight{
-    float: right;
+.pushCenter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+.pushCenterRow {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.pushLeft{
-    float: right;
-}
-.btnPagination{
-    margin-left: 3px;
-}
-.btnView{
+.divTextImg{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #F1F6FB;
+    opacity: 0.7;
+    width: 83%;
+    padding: 0;
+    margin-top: 70%;
 
-    padding: 10px;
-    left: 10px;
 }
-  
+.btnPagination {
+  margin-left: 3px;
+}
+.btnView {
+  padding: 10px;
+  left: 10px;
+}

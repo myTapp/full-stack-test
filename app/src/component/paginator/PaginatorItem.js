@@ -3,23 +3,26 @@ import { Col, Row } from "../../../node_modules/react-bootstrap";
 
 const PaginatorItem = (props) => (
   <>
-        <Row style={{ width: "300px"}}>
+        <Row style={{ width: "290"}}>
       {props.rows
         ? props.rows.map((element, index) => {
           return (
             <Col
-            sm={12}
+            sm={10}
             key={index}
             style={{
               backgroundImage: `url(${element.image})`,
               backgroundRepeat: "no-repeat",
               height: "300px",
-              maxWidth: "300px",
-      
-              border:"3px solid white"
+              margin: 3,
+              left: "15%",
+              width: "100px"
             }}
           >
-            {element.name + index}
+            <div className={"divTextImg"}>
+            <p>{element.name}</p>
+            <p>{element.species} | {element.gender}</p>
+            </div>
           </Col>)})
 
         : ""}
