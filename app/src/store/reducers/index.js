@@ -1,9 +1,9 @@
 
 import { combineReducers } from 'redux';
 
-import persons from './persons'
+import pagination from './pagination'
 
 export default combineReducers({
-    persons: persons,
+    pagination: pagination,
 
 })

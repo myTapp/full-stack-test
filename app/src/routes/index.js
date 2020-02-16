@@ -24,8 +24,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
   <BrowserRouter history={history}>
     <Switch>
-      <Route exact path="/" component={() => <Login />} />
-      <PrivateRoute paht="/home"  component={() => <Home />} />
+      <Route exact path="/" component={(props) => <Login {...props}/>} />
+      <PrivateRoute paht="/home"  component={(props) => <Home {...props} />} />
     </Switch>
   </BrowserRouter>
 );

@@ -3,16 +3,11 @@
 
 const doRequest = (url, method, options) => {
   options = options || {};
-
-  console.log(url,"options",options)
   return fetch(url , {
     method: method,
     headers: buildHeaders(options.headers),
     body: buildBody(options.body)
   }).then(async (res) => {
-    if (options.returnRes) {
-      return res;
-    }
     if (res.ok) {
       return await res.json();
     }
@@ -40,13 +35,11 @@ const buildBody = (bodyObj) => {
 const buildHeaders = (headersObj) => {
   console.log(headersObj);
   if (!headersObj) {
-    console.log("bbbb")
+
     return Service.headers;
   }
   let headers = Service.headers;
   for (let [key, value] of Object.entries(headersObj)) {
-    console.log("key",key, "value", value);
-    console.log(headersObj);
     headers.append(key, value);
   }
   return headers;

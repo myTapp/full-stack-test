@@ -23,9 +23,9 @@ class Login extends Component {
         name: this.state.userName,
         password: this.state.password
       });
-      console.log("resp", resp);
-      history.push("/home");
-      window.location.reload();
+      console.log("propsssssssssssssssssssssssss", this.props);
+      
+      this.props.history.push('/home')
     } catch (e) {
       console.log(e);
      alert("Invalid Credencials")

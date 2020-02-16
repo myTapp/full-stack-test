@@ -1,5 +1,5 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React from "../../../node_modules/react";
+import { Col, Row } from "../../../node_modules/react-bootstrap";
 
 const PaginatorItem = (props) => (
   <>

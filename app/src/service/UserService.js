@@ -28,14 +28,19 @@ export default class extends Service {
 
     let resp = await this.post(`http://localhost:3333/users/authenticate`, requestBody);
     localStorage.setItem("jwt", resp.token);
+    sessionStorage.setItem("jwt", resp.token);
     return resp;
   }
 
   // async getDataApi(requestBody) {
+  //   let jwt = localStorage.getItem("jwt");
   //   let resp = await this.post(`http://localhost:3333/api/authorization`, {
-  //     token: localStorage.getItem("jwt"),
+  //     token: jwt,
   //     page: 2
   //   });
+  //   if(!jwt){
+  //     console.log("token sumiu")
+  //   }
   //   localStorage.setItem("jwt", resp.token);
   //   console.log(resp);
   //   return resp;
