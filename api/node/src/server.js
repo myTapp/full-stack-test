@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-require('./routes/auth.routes')(app);
+require('./routes/authRoutes')(app);
 require('./routes/routes')(app)
 
 

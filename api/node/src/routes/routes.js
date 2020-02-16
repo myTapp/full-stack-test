@@ -10,4 +10,6 @@ const routes = express.Router();
 routes.post("/", UserController.add);
 
 routes.post("/authenticate", UserController.authenticateUser);
+
+
 module.exports = app => app.use("/users", routes);

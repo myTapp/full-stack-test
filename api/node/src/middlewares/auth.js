@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const authConfig = require("../config/auth");
 
 module.exports = (req, res, next) => {
+  console.log(req)
   const authHeader = req.headers.authorization;
 
   if (!authHeader) return res.status(401).send({ error: "No token provided" });
@@ -20,7 +21,6 @@ module.exports = (req, res, next) => {
 
   jwt.verify(token, authConfig.secret, (err, decoded) => {
     if (err) return res.status(401).send({ error: "Token invalid" });
-
     req.userId = decoded.id;
     return next();
   });

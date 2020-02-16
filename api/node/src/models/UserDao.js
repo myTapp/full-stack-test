@@ -12,5 +12,10 @@ module.exports = {
         return null;
     }
     return user
+  },
+
+  async findById(id) {
+    const user = await User.findByPk(id);
+    return user;
   }
 };

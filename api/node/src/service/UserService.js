@@ -5,10 +5,10 @@ const ErrorHandler = require("../ErrorHandler");
 const UserDao = require("../models/UserDao");
 
 module.exports = {
+
   async authenticate(userDto) {
     const { name, password } = userDto;
-    console.log(name);
-    const user = await UserDao.findByName(name);
+    const user = await this.getByName(name)
 
     if (!user) return { error: ErrorHandler.INVALID_CREDENCIALS };
     if (!(await bcrypt.compare(password, user.password)))
@@ -24,5 +24,12 @@ module.exports = {
     const user = await User.create({ name, password: hash });
 
     return user;
+  },
+
+  async getByName(name){
+    return  await UserDao.findByName(name);
+  },
+  async getById(id){
+    return await UserDao.findById(id);
   }
 };
