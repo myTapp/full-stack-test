@@ -32,51 +32,26 @@ export default class extends Service {
     return resp;
   }
 
-  // async getDataApi(requestBody) {
-  //   let jwt = localStorage.getItem("jwt");
-  //   let resp = await this.post(`http://localhost:3333/api/authorization`, {
-  //     token: jwt,
-  //     page: 2
-  //   });
-  //   if(!jwt){
-  //     console.log("token sumiu")
-  //   }
-  //   localStorage.setItem("jwt", resp.token);
-  //   console.log(resp);
-  //   return resp;
-  // }
-
-
-  async getDataApi(page) {
-    console.log("pages in service", page)
-    let resp = await axios.get(
-      `https://rickandmortyapi.com/api/character/?page=${page}`,
-    );
-    let dataApi = {
-      info: getInfos(resp.data.info),
-      persons: getPersons(resp.data.results)
-    };
-    console.log(dataApi);
-    return dataApi;
+  async getDataApi(requestBody) {
+    let jwt = localStorage.getItem("jwt");
+    let resp = await this.post(`http://localhost:3333/api/authorization`, {
+      token: jwt,
+      page: 2
+    });
+    console.log(resp);
+    return resp;
   }
 
   // async getDataApi(page) {
+  //   console.log("pages in service", page)
   //   let resp = await axios.get(
   //     `https://rickandmortyapi.com/api/character/?page=${page}`,
   //   );
   //   let dataApi = {
   //     info: getInfos(resp.data.info),
-  //     perosn: getPersons(resp.data.results)
+  //     persons: getPersons(resp.data.results)
   //   };
   //   console.log(dataApi);
-  // }
-
-  // async getDataApi(page) {
-  //   let resp = await this.post(
-  //     `http://localhost:3333/api/authorization`,
-  //     { pages: 2 },
-
-  //   );
-  //   console.log(resp);
+  //   return dataApi;
   // }
 }
