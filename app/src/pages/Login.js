@@ -1,25 +1,99 @@
-import React from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import { Col, Row, Button, InputGroup, FormControl } from "react-bootstrap";
+import React, { Component } from "react";
 
-import { Col, Row, Button } from "react-bootstrap";
+import UserService from "../service/UserService";
+import history from "../routes/history";
+import { withRouter } from 'react-router-dom';
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName: "",
+      password: "",
 
-import * as AuthActions from "../store/actions/authActions";
+    };
 
-const Login = ({ singIn, auth }) => (
-  <Row className="justify-content-md-center">
-    <Col xs lg={6}>
-      <h1>Login</h1>
-      <Button variant="primary" onClick={() => {console.log("aq!ui")}}>Login</Button>
-    </Col>
-  </Row>
-);
+    this.userService = new UserService();
+  }
 
-const mapStateToProps = state => ({
-  auth: state.auth
-});
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(AuthActions, dispatch);
+  async onLonginHandler() {
+    let resp = {};
+    try {
+      resp = await this.userService.authenticate({
+        name: this.state.userName,
+        password: this.state.password
+      });
+      console.log("resp", resp);
+      history.push("/home");
+      window.location.reload();
+    } catch (e) {
+      console.log(e);
+     alert("Invalid Credencials")
+    }
+  }
+  onChangeHander(e) {
+    console.log(e.target.value, e.target.name);
+    this.setState({ [e.target.name]: e.target.value });
+  }
+  render() {
+    return (
+      <Row className="justify-content-md-center">
+        <Col xs lg={6}>
+          <h1>Login</h1>
 
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
+              <InputGroup.Text id="basic-addon3">User Name</InputGroup.Text>
+            </InputGroup.Prepend>
+            <FormControl
+              id="basic-url"
+              aria-describedby="basic-addon3"
+              onChange={e => this.onChangeHander(e)}
+              value={this.state.userName}
+              name={"userName"}
+            />
+          </InputGroup>
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+          <InputGroup className="mb-3">
+            <InputGroup.Prepend>
+              <InputGroup.Text id="basic-addon3">Password</InputGroup.Text>
+            </InputGroup.Prepend>
+            <FormControl
+              id="basic-url"
+              aria-describedby="basic-addon3"
+              onChange={e => this.onChangeHander(e)}
+              value={this.state.password}
+              name={"password"}
+              type={"password"}
+            />
+          </InputGroup>
+
+          <Button variant="primary" onClick={() => this.onLonginHandler()}>
+            Login
+          </Button>
+        </Col>
+      </Row>
+    );
+  }
+}
+
+export default withRouter(Login);
+// }
+
+// const Login = ({ props, auth, singIn }) => (
+//   <Row className="justify-content-md-center">
+//     <Col xs lg={6}>
+//       <h1>Login</h1>
+//       <Button variant="primary" onClick={singIn}>Login</Button>
+//       <Link to={{pathname:'/home'}}>aaa</Link>
+//     </Col>
+//   </Row>
+// );
+
+// const mapStateToProps = state => ({
+//   auth: state.auth
+// });
+// const mapDispatchToProps = dispatch =>
+//   bindActionCreators(AuthActions, dispatch);
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Login)

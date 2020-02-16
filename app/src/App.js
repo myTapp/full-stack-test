@@ -1,8 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 import Routes from "./routes";
 
-const App = ({}) => <Routes />;
-
+const App = () => <Routes></Routes>;
 
 export default App;

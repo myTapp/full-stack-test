@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
 import { isAuthenticated } from "../auth";
+import history from './history';
 
 import Login from "../pages/Login";
 import Home from "../pages/Home";
@@ -20,12 +22,13 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 );
 
 const Routes = () => (
-  <BrowserRouter>
+  <BrowserRouter history={history}>
     <Switch>
-      <Route exact path="/" component={() => <Login/>} />
-      <PrivateRoute paht="/home" component={() => <Home/>} />
+      <Route exact path="/" component={() => <Login />} />
+      <PrivateRoute paht="/home"  component={() => <Home />} />
     </Switch>
   </BrowserRouter>
 );
 
 export default Routes;
+
