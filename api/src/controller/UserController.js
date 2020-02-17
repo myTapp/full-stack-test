@@ -1,7 +1,7 @@
 const UserService = require("../service/UserService");
 
 module.exports = {
-  async add(req, res) {
+  async save(req, res) {
     const userDto = req.body;
     const user = await UserService.createUser(userDto);
     return res.json(user);
@@ -18,7 +18,11 @@ module.exports = {
     
       });
     }
-
+  },
+  async delete(req, res) {
+    const userDto = req.body;
+    await UserService.delete(userDto);
+    return res.json();
   },
 
 };

@@ -7,7 +7,4 @@ const routes = express.Router();
 routes.use(authMiddleware);
 
 routes.post('/', CharsController.getData);
-
-routes.get('/', )
-
-module.exports = app => app.use('/api/authorization', routes);
+module.exports = app => app.use('/api/chars', routes);

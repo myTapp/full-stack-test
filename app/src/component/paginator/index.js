@@ -1,5 +1,5 @@
-import { Pagination } from "../../../node_modules/react-bootstrap";
-import React from "../../../node_modules/react";
+import { Pagination } from "react-bootstrap";
+import React from "react";
 
 import PaginationBtn from "./PaginationBtn";
 import PaginatorItem from "./PaginatorItem";

@@ -3,10 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { withRouter } from "react-router-dom";
 
-import { Container } from "react-bootstrap";
-
-import PaginationBtn from "../component/paginator/PaginationBtn";
-import Paginator from "../component/paginator/Paginator";
+import Paginator from "../component/paginator/index";
 import * as PerrsonsActions from "../store/actions/pagination";
 
 const Home = ({ status, getDataApi, chars, info }) => (
