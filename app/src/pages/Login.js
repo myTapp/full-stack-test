@@ -23,12 +23,10 @@ class Login extends Component {
 
       this.props.history.push("/home");
     } catch (e) {
-      console.log(e);
       alert("Invalid Credencials");
     }
   }
   onChangeHander(e) {
-    console.log(e.target.value, e.target.name);
     this.setState({ [e.target.name]: e.target.value });
   }
   render() {

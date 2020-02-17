@@ -33,7 +33,6 @@ const buildBody = (bodyObj) => {
 };
 
 const buildHeaders = (headersObj) => {
-  console.log(headersObj);
   if (!headersObj) {
 
     return Service.headers;

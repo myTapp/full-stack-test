@@ -5,7 +5,6 @@ function btns(size) {
   let items = [];
   for (let number = 1; number <= size; number++) {
     items.push({ key: number });
-    console.log(size)
   }
   return items;
 }
