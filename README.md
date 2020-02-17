@@ -64,8 +64,8 @@ A plicação ja está com integração com ferramentas de testes para funções 
     | saga ------------------- middleware utilizado junto ao redux para interceptar as ações asyncronas.  </br> </br> </br
 
 
-### Statartando Front end
+### Iniciando Front end
 1 - npm install </br>
-2 - npm start </br>
+2 - npm start <
 
 
