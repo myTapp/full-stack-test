@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 require("./configs/LoaderEnv");
+const user = require("./models/User");
 
+user.findAll().then(console.log);
 
 app.listen(process.env.PORT, (error) => {
     if (error) {
