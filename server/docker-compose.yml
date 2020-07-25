@@ -11,3 +11,10 @@ services:
           POSTGRES_DB: mytapp
         ports:
             - 5433:5432
+            
+    cache:
+        image: redis
+        restart: always
+        ports:
+            -  6379:6379
+

@@ -13,7 +13,7 @@ class AuthEndpoint extends Endpoint {
         return loginValidation();
     }
 
-    authentication(request, response) {
+    async authentication(request, response, next) {
         try {
             const credentials = request.body;
             this.isValid(credentials);

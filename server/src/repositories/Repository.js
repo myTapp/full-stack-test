@@ -5,29 +5,35 @@ class Repository {
         this._model = model;
     }
 
-    findById(id) {
-        return this._model.findAll({
+    async findById(id, options) {
+        const item = await this._model.findOne({
             where: {
                 id
-            }
+            }, 
+            ...options
         });
+
+        if (!item) {
+            return null;
+        }
+
+        return item.dataValues;
     }
 
-    findAll() {
-        return this._model.findAll();
+    async findAll(options) {
+        return this._model.findAll(options);
     }
 
     create(newRegister) {
         return this._model.create(newRegister);
     }
 
-    update(id, datasModified) {
-        const item = await this.findById(id);
-        Object.keys(datasModified)
-            .map(key => {
-                item[key] = datasModifiaed[key]
-            });
-        item.save();
+    async update(id, datasModified) {
+        return this._model.update(datasModified, {
+            where: {
+                id
+            }
+        });
     }
 
     delete(id) {

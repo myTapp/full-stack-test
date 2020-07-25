@@ -8,16 +8,22 @@ class UserRepository extends Repository {
         super(UserModel);
     }
 
-    findByEmail(email) {
-        return this.getModel().findAll({
+    async findByEmail(email) {
+        const user = await this.getModel().findOne({
             where: {
                 email
             }
         });
+
+        if (!user) {
+            return null;
+        }
+
+        return user.dataValues;
     }
 
-    findByEmailAndIdDifferenceMencionated(email, id) {
-        return this.getModel().findAll({
+    async findByEmailAndIdDifferenceMencionated(email, id) {
+        const user = await this.getModel().findOne({
             where: {
                 email: email, 
                 id: {
@@ -25,6 +31,12 @@ class UserRepository extends Repository {
                 }
             }
         });
+
+        if (!user) {
+            return null;
+        }
+
+        return user.dataValues;
     }
 }
 

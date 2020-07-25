@@ -3,6 +3,10 @@ const InvalidDatasException = require("./../exceptions/InvalidDatasException");
 
 class Endpoint {
 
+    constructor() {
+        this.isValid = this.isValid.bind(this);
+    }
+
     getValidationRules() {
         throw new Error("Method not implement child class!");
     }
@@ -17,9 +21,9 @@ class Endpoint {
                 validationErrors[item.context.label] = item.message.replace(/"/g, "");
             });
 
-            throw new InvalidDatasException(JSON.stringify(validationErrors));
+            throw new InvalidDatasException(validationErrors);
         }
     }
 }
 
-module.exports = InvalidDatasException;
+module.exports = Endpoint;

@@ -1,9 +1,14 @@
 const express = require("express");
-const app = express();
+const bodyParser = require("body-parser");
 require("./configs/LoaderEnv");
-const user = require("./models/User");
+const app = express();
+const routesApp = require("./routes");
 
-user.findAll().then(console.log);
+// Enable middleware parse datas to json.
+app.use(bodyParser.json());
+
+// Set routes application.
+routesApp(app);
 
 app.listen(process.env.PORT, (error) => {
     if (error) {

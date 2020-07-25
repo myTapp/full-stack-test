@@ -4,12 +4,15 @@ const LogicException = require("./../exceptions/LogicException");
 
 class UserService {
 
-    constructor(repository) {
+    constructor(repository, encryptor) {
         this._repository = repository;
+        this._encryptor = encryptor;
     }
 
     findAll() {
-        return this._repository.findAll();
+        return this._repository.findAll({
+            attributes: {exclude: ['password']}
+        });
     }
 
     findByEmail(email) {
@@ -23,6 +26,7 @@ class UserService {
             throw new LogicException("Tente outro email!");
         }
 
+        newUser.password = await this._encryptor.encrypt(newUser.password);
         return this._repository.create(newUser);
     }
 
@@ -41,15 +45,24 @@ class UserService {
             throw new LogicException("Tente outro email!");
         }
 
+        if (datasModified.password) {
+            datasModified.password = await this._encryptor
+                .encrypt(datasModified.password);
+        }
+
         return this._repository.update(id, datasModified);
     }
 
     async findById(id) {
-        const user = await this._repository.findById(id);
+        const user = await this._repository.findById(id, {
+            attributes: {exclude: ['password']}
+        });
         
         if (!user) {
             throw new NotFoundException("Usuário não encontrado!");
         }
+
+        return user;
     }
 
 }
