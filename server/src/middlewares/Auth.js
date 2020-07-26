@@ -9,8 +9,8 @@ module.exports = {
         let accessToken = request.header(CONSTANTS.PARAM_HEADER_AUTHORIZATION);
 
         if (!accessToken) {
-            return response.status(403).json({
-                statusCode: 403,
+            return response.status(401).json({
+                statusCode: 401,
                 message: "Você não tem permissão para acessar os recursos!"
             });
         }
