@@ -1,36 +1,20 @@
-<p align="center">
-  <img width="260" src="https://raw.githubusercontent.com/myTapp/temos-vagas/master/logo_mytapp_primario.png?raw=true">
-</p>
+Instruções do backend
+=======================
 
-## Teste full-stack developer (v1.2)
-O teste consiste em criar uma aplicação com Node.js e PostgreSQL que expõe uma API REST de um CRUD de usuário e uma aplicação web contendo uma interface para login e acesso a dados de uma API externa.
 
-Depois de logado o usuário da aplicação web deve poder acessar dados da [Punk API v2](https://punkapi.com/) - uma API aberta da cervejaria BrewDog.
+Requisitos:
+------------
 
-### Back-end
-- Todos os endpoints de consulta de dados devem ter autenticação por webtoken ou similar
-- Fique a vontade para usar algum ORM de preferência ([sequelize](https://github.com/sequelize/sequelize), [typeorm](https://github.com/typeorm/typeorm), ...)
+- Node.js versão 12.13.0
+- Npm versão 6.4.1
+- Docker e docker-composer para rodar projeto em ambiente de desenvolvimento.
 
-> O CRUD de usuários não necessita interface, coloque os enpoints disponíveis no README do projeto.
+Rodar projeto em ambiente de desenvolvimento:
+----------------------------------------------
 
-### Front-end
-O front-end deve apresentar pelo menos os seguintes requisitos:
-  - Interface de login
-    - Feedbacks de usuário ou senha incorreta
-  - Listagem dos dados da Punk API v2
-  - Paginação dos dados
-  
-> Pode ser utilizado qualquer framework front-end, preprocessadores de css, task runners, bundlers, ... de preferência mas nenhum deles é obrigatório.
-
-## Critérios de avaliação
-- Funcionamento do projeto
-- Estrutura do código
-- Uso de boas práticas
-- Cumprimento dos requisitos mínimos
-
-## Deve ser entregue:
-- Um repositório git (fork deste)
-> Não se deve fazer o commit de pastas como `node_modules`, o projeto deve instalar suas dependências a partir do `package.json`
-
-## Extras:
-- Build para produção
+- Clona projeto.
+- Acessar o diretório *server*
+- Executar o comando: **npm install** para instalar as dependências do projeto.
+- Criar um arquivo chamado **.env** na raiz do diretório *server* usando o arquivo **.env.example** como base e alterar as informações.
+- Executar o comando: **npm run start:dev** esse comando irá criar os containers docker com redis e postgres é depois iniciar a aplicação.
+- Após executar o comando acima irá exibir o console o endereço em que aplicação está rodando acesse o endereço no navegador, mas antes acrescente ao endereço a seguinte parte: **/api/docs** isso irá exibir a documentação da api é permitirá fazer testes.
