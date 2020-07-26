@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "pm2 start ./src/index.js --name 'api-challenge-mytapp'",
     "db:seed": "npx sequelize-cli db:seed:all",
     "db:migrate": "npx sequelize-cli db:migrate",
     "prestart:dev": "docker-compose up -d ",
-    "start:dev": "node_modules/.bin/nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "node_modules/.bin/nodemon ./src/index.js"
   },
   "author": "",
   "license": "ISC",
