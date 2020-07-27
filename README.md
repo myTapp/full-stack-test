@@ -62,3 +62,13 @@ Rodar projeto em ambiente de desenvolvimento:
 - Criar um arquivo chamado **.env** na raiz do diretório *client* usando o arquivo **.env.example** como base e altere as informações do arquivo **.env**.
 - Executar o comando: **npm start** esse criar um servidor para servir o projeto react.
 - Abrir o navegador é acessar o seguinte endereço: http://localhost:3001/
+
+
+Rodar projeto em ambiente de desenvolvimento:
+----------------------------------------------
+
+- Clonar projeto.
+- Acessar o diretório *client*
+- Executar o comando: **npm install** para instalar as dependências do projeto.
+- Criar um arquivo chamado **.env** na raiz do diretório *client* usando o arquivo **.env.example** como base e altere as informações do arquivo **.env**.
+- Executar o comando: **bash ./buildProduction.sh** esse comando irá criar o diretório **build** com os arquivos que você precisar colocar em um servidor apache ou nginx.
