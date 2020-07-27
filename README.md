@@ -39,3 +39,26 @@ Rodar projeto em ambiente de produção:
 - Instalar o **pm2** que é o gerenciador de processo node.js para quando estamos rodando aplicação node.js em produção.
 - Executar o comando: **npm start** que irá rodar a aplicação usando pm2.
 - Após executar o comando acima irá exibir o console o endereço em que aplicação está rodando acesse o endereço no navegador, mas antes acrescente ao endereço a seguinte parte: **/api/docs** isso irá exibir a documentação da api é permitirá fazer testes.
+
+
+Instruções do frontend
+=======================
+
+
+Requisitos:
+------------
+
+- Node.js versão 12.13.0
+- Npm versão 6.4.1
+- Git
+
+
+Rodar projeto em ambiente de desenvolvimento:
+----------------------------------------------
+
+- Clonar projeto.
+- Acessar o diretório *client*
+- Executar o comando: **npm install** para instalar as dependências do projeto.
+- Criar um arquivo chamado **.env** na raiz do diretório *client* usando o arquivo **.env.example** como base e altere as informações do arquivo **.env**.
+- Executar o comando: **npm start** esse criar um servidor para servir o projeto react.
+- Abrir o navegador é acessar o seguinte endereço: http://localhost:3001/
