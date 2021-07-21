@@ -11,7 +11,7 @@ Depois de logado o usuário da aplicação web deve poder acessar dados da [Punk
 - Todos os endpoints de consulta de dados devem ter autenticação por webtoken ou similar
 - Fique a vontade para usar algum ORM de preferência ([sequelize](https://github.com/sequelize/sequelize), [typeorm](https://github.com/typeorm/typeorm), ...)
 
-> O CRUD de usuários não necessita interface, coloque os enpoints disponíveis no README do projeto.
+> O CRUD de usuários não necessita interface, coloque os endpoints disponíveis no README do projeto.
 
 ### Front-end
 O front-end deve apresentar pelo menos os seguintes requisitos:
@@ -20,7 +20,7 @@ O front-end deve apresentar pelo menos os seguintes requisitos:
   - Listagem dos dados da Punk API v2
   - Paginação dos dados
   
-> Pode ser utilizado qualquer framework front-end, preprocessadores de css, task runners, bundlers, ... de preferência mas nenhum deles é obrigatório.
+> Pode ser utilizado qualquer framework front-end, preprocessadores de css, task runners, bundlers, ... de sua preferência, mas nenhum deles é de uso obrigatório.
 
 ## Critérios de avaliação
 - Funcionamento do projeto
