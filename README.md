@@ -30,7 +30,9 @@ O front-end deve apresentar pelo menos os seguintes requisitos:
 
 ## Deve ser entregue:
 - Um repositório git (fork deste)
+- Um README do projeto com o passo-a-passo para executar a aplicação.
 > Não se deve fazer o commit de pastas como `node_modules`, o projeto deve instalar suas dependências a partir do `package.json`
 
 ## Extras:
 - Build para produção
+- Docker file com todas dependências
