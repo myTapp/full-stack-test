@@ -1,0 +1,13 @@
+{
+  "beer_alcohol": 4.5,
+  "beer_description": "Apresenta coloração dourada com aparência brilhante. Essa cerveja traz no aroma e sabor o equilíbrio entre o malte e o lúpulo, com teor alcoólico de 4,5% e amargor baixo.",
+  "beer_ibu": 16,
+  "beer_id": 34,
+  "beer_image": "https://sede.mytapp.com.br/devices/image/207",
+  "beer_name": "Pistoleira",
+  "beer_style": "Pilsen",
+  "brewery": "Nefasta",
+  "brewery_image": "https://sede.mytapp.com.br/devices/image/205",
+  "price_ml": 0.02,
+  "tap_id": 1
+}

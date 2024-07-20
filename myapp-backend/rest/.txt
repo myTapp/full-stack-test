@@ -1,0 +1,17 @@
+Para utilizar o esta seção, é necessário baixar a extensão: 
+
+Nome: REST Client
+ID: humao.rest-client
+Descrição: REST Client for Visual Studio Code
+Versão: 0.25.1
+Editor: Huachao Mao
+Link do Marketplace do VS: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+Como utilizar:
+
+Rode o back-end (npm start)
+Entre em um arquivo .http
+Na parte superior esquerda, clique no botão escrito "Send Request"
+
+TODO:
+- GET NÃO ESTA FUNCIONANDO

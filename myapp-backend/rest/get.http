@@ -1,0 +1,6 @@
+GET http://localhost:3001/api/user/6 HTTP/1.1
+content-type: application/json
+Authorization: Bearer xxx
+
+{
+}
